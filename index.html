@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+     h1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+             font-size: 32px;
+        }
+        button{
+            width: 150px;
+            font-weight: bold;
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255)
+        }
+    .grid {
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px 50px 50px 50px;
+    border-radius: 50px;
+    border: 2px solid #cbcbcb;
+    box-shadow: 10px 15px 5px #525252;
+    background-color: rgb(197, 197, 197);
+    }
+    #center{
+       text-align: center;
+       margin-top: 80px;
+       background-color: rgb(230, 230, 230);
+       border-radius: 50px;
+       box-shadow: 10px 15px 5px #525252;
+    }
+    input{
+        margin: 10px;
+        width: 50%;
+        border-radius: 5px;
+        
+    }
+    body{
+        background-color:rgb(154, 157, 158);
+    }
+
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="grid">
+        <div id="center">
+            <h1>Registration</h1>
+
+        <input type="text" placeholder="username" id="name"><br>
+        <input type="email" placeholder="email" id="email"><br>
+        <input type="number" placeholder="Number" id="number"><br>
+        <input type="password" placeholder="password" id="password"><br>
+        <button onclick="submit()">Submit</button>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

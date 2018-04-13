@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRumwGZGf490BjZYTQY7MThk-9hhCpwcc9UIg0HV2-KrjQqYK);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        h1 {
+            background-color: white;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+        }
+
+        #sel,
+        #bt,
+        #data,
+        .btn {
+
+            width: 30%;
+            margin: 0 auto;
+        }
+        #cen{
+            margin-left: 180px;
+        }
+        h3{
+            background-color: white;
+            border-radius: 5px;
+            margin-right: 180px;
+        }
+        li{
+            background-color: beige;
+            font-size: px;
+            margin-right: 300px;
+        }
+        button{
+            
+            text-align: left;
+            
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class=".container-fluid">
+
+        <div class="row">
+            <div class="col-md-12 .page-header">
+                <h1>Curriculum Vitae</h1>
+            </div>
+
+        </div>
+
+
+
+        <select name="" id="sel" class="form-control" class="col-xs-4">
+            <option value="obj">OBJECTIVE</option>
+            <option value="per">PERSONAL INFORMATION</option>
+            <option value="qua">QUALIFICATION</option>
+            <option value="skil">SKILLS</option>
+            <option value="ex">EXPERIANCE</option>
+            <option value="lan">LANGUAGES</option>
+        </select>
+        <input type="text" id="data" class="form-control">
+        <div id="bt">
+            <button onclick="add()" class="btn btn-success">Add</button>
+        </div>
+
+
+        <div id="cen">
+            <h3>OBJECTIVE</h3>
+
+
+
+            <ul id="obj">
+
+            </ul>
+
+            <h3>PERSONAL INFORMATION</h3>
+            <ul id="per">
+
+            </ul>
+            <h3>QUALIFICATION</h3>
+            <ul id="qua">
+
+            </ul>
+            <h3>SKILLS</h3>
+            <ul id="skil">
+
+            </ul>
+            <h3>EXPERIANCE</h3>
+            <ul id="ex">
+
+            </ul>
+            <h3>LANGUAGES</h3>
+            <ul id="lan">
+
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function add() {
+            var data = document.getElementById('data');
+            var list = document.getElementById(document.getElementById('sel').value);
+            var li = document.createElement('li');
+            var btn1 = document.createElement('button');
+            var btn2 = document.createElement('button');
+            btn1.innerHTML = 'Edit';
+            btn2.innerHTML = 'Delete';
+            btn1.onclick = function () {
+                this.parentNode.replaceChild(document.createTextNode(prompt("Enter Value")), this.parentNode.childNodes[0]);
+            }
+            btn2.onclick = function () {
+
+                list.removeChild(this.parentNode);
+            }
+            var text = document.createTextNode(data.value);
+            li.appendChild(text);
+            li.appendChild(btn1);
+            li.appendChild(btn2);
+            list.appendChild(li);
+            data.value = "";
+        }
+        function del() {
+            document.getElementById("list").value = "";
+        }
+
+    </script>
+</body>
+
+</html>
